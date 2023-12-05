@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1701704304 "/home/typw/Downloads/Intellectual Property/Essay.tex" "Essay.pdf" "Essay" 1701704305 2
+["pdflatex"] 1701779807 "/home/typw/Downloads/Intellectual Property/Essay.tex" "Essay.pdf" "Essay" 1701779808 0
   "/etc/texmf/web2c/texmf.cnf" 1698392203 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/typw/Downloads/Intellectual Property/Essay.tex" 1701704303 5063 20c8222eec7619afec02a798d20af9de ""
+  "/home/typw/Downloads/Intellectual Property/Essay.tex" 1701779806 5078 fe14990899bd7a27da16e8b0204664a9 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -14,6 +14,10 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
@@ -62,8 +66,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1693172360 40357 c95f5d5e031b5c7040b426833c11f2e0 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1698392981 4643645 d2d1d8b8ba87ed005f4aaf1ce646a79e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1698393096 7907541 187c86681e0489c3f4151bfaf823f584 ""
-  "Essay.aux" 1701704305 530 02a7d92a590af7f91cfb482a1e58603d "pdflatex"
-  "Essay.tex" 1701704303 5063 20c8222eec7619afec02a798d20af9de ""
+  "Essay.aux" 1701779808 554 04ae3964aa57b78538b565d0454a3de2 "pdflatex"
+  "Essay.out" 1701779808 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Essay.tex" 1701779806 5078 fe14990899bd7a27da16e8b0204664a9 ""
   (generated)
   "Essay.aux"
   "Essay.log"
