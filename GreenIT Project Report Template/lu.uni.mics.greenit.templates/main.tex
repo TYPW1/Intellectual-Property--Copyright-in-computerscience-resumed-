@@ -1,0 +1,271 @@
+\documentclass[conference,compsoc]{IEEEtran}
+\usepackage{datetime}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{cite} 
+\usepackage{hyperref}
+\usepackage{xcolor}
+ 
+\begin{document}
+
+% paper title
+\title{EcoCode: A Flask-based Application for Code Optimization and CO2 Emission Estimation\\
+{\small \today~-~\currenttime}}
+
+% student name
+\author{\IEEEauthorblockN{TITCHEU YAMDJEU Pierre Wilfried}
+\IEEEauthorblockA{University of Luxembourg\\
+Email: pierre.titcheu@student.uni.lu}
+\\
+(minimum of 5 pages excluding figures and references)\\}
+
+% make the title area
+\maketitle
+
+% abstract
+\begin{abstract}
+    EcoCode is a web application designed to analyze and optimize  code for efficiency and reduced environmental impact. Integrating OpenAI's GPT-4 for code analysis and CodeCarbon for CO2 emission estimation, this project aims to contribute to sustainable coding practices, aligning with the United Nations' Sustainable Development Goals. This report outlines the application's development process, architecture, and assessment against its functional and non-functional requirements.
+\end{abstract}
+    
+
+% Introduction
+\section{Introduction}
+
+This project, EcoCode, is developed in response to the growing need for sustainable computing practices. With an increasing focus on reducing the environmental impact of technology, the application aims to assist developers in optimizing their code for energy efficiency and lower CO2 emissions. The project is aligned with Sustainable Development Goal 12: Responsible Consumption and Production, set by the United Nations. The primary objective is to create a user-friendly web application that analyzes  code, provides optimization suggestions, and estimates associated CO2 emissions. This report details the application's requirements, architecture, development, and assessment, highlighting its contributions to Green IT.
+
+\section{Requirements (min 2 pages)}
+In the development of the EcoCode, a thorough set of requirements was established, aimed at guiding the project towards its intended goals. These requirements, encompassing both functional and non-functional aspects, are centered around Green IT principles and are designed to contribute positively to environmental sustainability in the realm of information technology. Each requirement is framed to be testable and measurable, providing clear benchmarks for evaluating the success of the project. This aligns every facet of the application with the Sustainable Development Goals (SDGs), specifically focusing on SDG 12: Responsible Consumption and Production.
+
+The subsections below detail the specific functional and non-functional requirements of EcoCode. These requirements are carefully defined using the SMART criteria, ensuring they are Specific, Measurable, Achievable, Relevant, and Time-bound. The rationale behind each requirement is directly linked to sustainable metrics, thereby positioning the project within the broader scope of Green IT and IT for Green initiatives.
+
+\subsection{Functional Requirements}
+EcoCode is equipped with functionalities that significantly contribute to sustainable software development. The application's features are designed to provide insights into energy consumption and efficiency for  code, directly supporting the Sustainable Development Goals (SDGs), particularly SDG 12: Responsible Consumption and Production, SDG 7: Affordable and Clean Energy, and SDG 13: Climate Action.
+
+\subsubsection{Natural language description}
+\begin{itemize}
+    \item \textbf{Code Efficiency Analysis}: Analyzes source code to identify inefficient practices, thereby reducing CPU usage and energy consumption.
+    \item \textbf{Refactoring Suggestions}: Provides recommendations for code refactoring to enhance efficiency without compromising functionality.
+    \item \textbf{CO2 Emission Estimation}: Estimates CO2 emissions associated with the execution of the original and optimized code.
+    \item \textbf{User-Friendly Interface}: Ensures an easy-to-use interface for uploading and analyzing code.
+    \item \textbf{Real-Time Feedback}: Offers immediate suggestions for energy-efficient coding during the development process.
+    \item \textbf{Multi-Language Support}: Compatibility with various programming languages for broad applicability.
+    \item \textbf{Educational Component}: Includes resources to educate users on sustainable coding practices.
+    \item \textbf{Performance Reporting}: Generates reports detailing potential energy savings and efficiency improvements.
+\end{itemize}
+
+\subsubsection{Formal specification}
+\begin{itemize}
+    \item \textbf{Operation}: \textit{Code Analysis, Optimization, and Emission Estimation}
+    \item \textbf{Users}: \textit{Developers and programmers focused on sustainable coding practices.}
+    \item \textbf{Description}: \textit{Facilitates  code submission, offering optimized solutions along with CO2 emission estimates and educational resources.}
+    \item \textbf{Parameters}: \textit{User-submitted  code.}
+    \item \textbf{Pre-condition}: \textit{User possesses valid  code for analysis.}
+    \item \textbf{Post-condition}: \textit{Provides the user with an optimized version of the code, emission estimates, and educational insights.}
+    \item \textbf{Trigger}: \textit{Submission of code via the web application interface.}
+\end{itemize}
+
+\subsubsection{SDGs targets}
+\begin{itemize}
+    \item \textbf{Mapping with SDG Targets}: The functionalities of the application contribute to SDG 7 by promoting energy-efficient coding practices, aligning with SDG 12 by encouraging sustainable software development, and supporting SDG 13 by aiming to reduce greenhouse gas emissions through optimized software energy efficiency.
+\end{itemize}
+
+\subsection{Non-Functional Requirements}
+The non-functional requirements of EcoCode emphasize performance, usability, and Green IT alignment. The app is designed to be efficient, user-friendly, and environmentally responsible, meeting the demands of modern software while contributing to sustainability goals.
+
+\begin{itemize}
+    \item \textbf{Energy Efficiency}: Optimized for minimal energy consumption during both idle and active states.
+    \item \textbf{Resource Efficiency}: Utilizes computing resources such as CPU, memory, and storage efficiently.
+    \item \textbf{Scalability}: Effectively scales to maintain performance regardless of the codebase size it analyzes.
+    \item \textbf{Maintainability and Adaptability}: Easy to maintain and adaptable to new sustainable coding practices and languages.
+    \item \textbf{User Experience}: User-friendly interface accessible to users with varying expertise levels.
+    \item \textbf{Educational Value}: Includes educational content to raise awareness about sustainable coding.
+    \item \textbf{Security}: Ensures data security and privacy, especially when handling sensitive code.
+    \item \textbf{Portability and Compatibility}: Portable across different operating systems and compatible with multiple programming languages.
+    \item \textbf{Sustainability Reporting}: Generates detailed sustainability impact reports of analyzed code.
+    \item \textbf{Continual Improvement}: Supports continuous updates based on user feedback and evolving best practices.
+\end{itemize}
+
+These non-functional requirements are crucial in ensuring that EcoCode is not only functionally effective but also aligns with the broader objectives of sustainability in software development. They ensure the application's long-term utility and relevance in promoting Green IT practices.
+
+\section{Architecture}
+The architecture of EcoCode is a reflection of its primary objectives: to provide an efficient and user-friendly platform for  code optimization and CO2 emission estimation. The application leverages a client-server model, integrating various technologies and frameworks to achieve its goals. This section details the architectural choices and the rationale behind them.
+
+\subsection{Overall Architecture}
+EcoCode is structured around a web-based interface, allowing users to interact with the system via a standard web browser. The application is built using the Flask framework, a lightweight and flexible  web framework. Flask was chosen for its simplicity and efficiency, which aligns with the project's Green IT principles.
+
+\textbf{Frontend}: The frontend is developed using HTML5 and CSS, providing a clean and intuitive user interface (UI). The UI includes a text area for code input and sections for displaying the analysis results, optimized code, and CO2 emission estimates. JavaScript is minimally used to enhance interactivity without compromising performance.
+
+\textbf{Backend}: The Flask server, forming the backbone of the application, handles requests from the frontend, processes them, and returns the results. Flask's ability to handle HTTP requests and responses efficiently makes it an ideal choice for this application.
+
+\subsection{Integration with OpenAI and CodeCarbon}
+A key feature of EcoCode is its integration with external APIs for code optimization and CO2 emission estimation.
+
+\textbf{OpenAI API}: The application utilizes OpenAI's GPT-4 model for analyzing and suggesting optimizations for the submitted  code. GPT-4's advanced natural language processing capabilities enable it to understand and process code efficiently, providing valuable insights and optimization suggestions.
+
+\textbf{CodeCarbon}: For estimating the CO2 emissions associated with running the original and optimized code, EcoCode integrates with the CodeCarbon API. CodeCarbon offers a way to estimate the energy consumption and carbon footprint of computing tasks, which is crucial for assessing the environmental impact of software.
+
+\subsection{Data Flow}
+The data flow within EcoCode is streamlined for efficiency and clarity. When a user submits  code via the frontend, the request is sent to the Flask server. The server then forwards the code to the OpenAI API for analysis. The response from OpenAI, containing optimization suggestions, is processed by the server and combined with CO2 emission estimates obtained from CodeCarbon. The consolidated results are then sent back to the frontend for display to the user.
+
+\subsection{Security and Scalability}
+Considering the nature of the application, security and scalability are key concerns. Secure HTTP (HTTPS) is recommended for deployment to ensure data privacy and integrity. Flask's scalability supports handling a growing number of users, and its compatibility with various database solutions allows for future enhancements, such as storing user sessions or optimization histories.
+
+\subsection{Mathematical Notation}
+To quantify the efficiency of code optimizations, the following mathematical model is proposed:
+
+\textit{Efficiency Gain (E)} = \textit{Time Original (T\textsubscript{o})} / \textit{Time Optimized (T\textsubscript{opt})}
+
+Where \textit{Time Original (T\textsubscript{o})} is the execution time of the original code, and \textit{Time Optimized (T\textsubscript{opt})} is the execution time after optimization. A higher value of \textit{E} indicates a more significant efficiency gain.
+
+\subsection{Overall}
+The architecture of EcoCode is designed to be simple yet effective, aligning with the principles of Green IT. The integration of Flask, OpenAI, and CodeCarbon, along with a user-friendly frontend, makes EcoCode a tool that not only aids in software optimization but also promotes awareness of environmental sustainability in software development.
+
+\section{Proof-of-Concept Production}
+The EcoCode project has been developed as a prototype to demonstrate the practical application of integrating code optimization with environmental impact awareness. The proof-of-concept focuses on two main components: the backend, developed in  using Flask and OpenAI APIs, and the frontend, which is a simple yet functional web interface designed with HTML. Below are descriptions and excerpts from both components to illustrate the current status of the project.
+
+\subsection{Backend Implementation}
+The backend of EcoCode serves as the core for processing user requests. It is written in  and utilizes Flask, a lightweight web framework, for handling HTTP requests and responses. The integration with OpenAI's GPT-4 API allows for the analysis and optimization of the submitted  code. Additionally, the CodeCarbon API is used to estimate the CO2 emissions associated with the execution of the original and optimized code.
+
+\textbf{Key Code Excerpts}:
+\begin{lstlisting}[language=]
+from flask import Flask, render_template, request
+from openai import OpenAI
+from codecarbon import EmissionsTracker
+
+client = OpenAI(api_key='your_api_key')
+
+app = Flask(__name__)
+
+# Functions for code analysis and optimization
+def analyze_code(code):
+    # ... function implementation ...
+
+def optimize_code(code):
+    # ... function implementation ...
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    # ... route implementation ...
+
+if __name__ == '__main__':
+    app.run(debug=True)
+\end{lstlisting}
+
+\subsection{Frontend Design}
+The frontend of EcoCode offers a user-friendly interface for submitting  code and viewing the analysis results. It is built using HTML and provides a clear and straightforward way for users to interact with the application. The design ensures that users can easily submit their code, and view both the optimized version and the estimated CO2 emissions.
+
+\textbf{HTML Template Excerpt}:
+\begin{lstlisting}[language=HTML]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcoCode Web App</title>
+</head>
+<body>
+    <!-- Form for code input -->
+    <form method="POST">
+        <textarea name="code_input" rows="10" 
+        cols="50"></textarea>
+        <input type="submit" value="Optimized Code">
+    </form>
+
+    <!-- Display area for original 
+    and optimized code -->
+    <!-- ... HTML content ... -->
+</body>
+</html>
+\end{lstlisting}
+
+\subsection{Current Status and Future Work}
+As of now, the EcoCode is in a prototype stage. The application successfully allows users to submit  code, receive an optimized version, and view the estimated CO2 emissions. Future work will focus on enhancing the UI/UX design, incorporating additional features such as user authentication, and extending support for other programming languages. The scalability and security aspects will also be addressed in subsequent development phases.
+
+\section{Assessment}
+The assessment of EcoCode critically evaluates its deliverables against the established requirements, ensuring that the prototype aligns with the SMART criteria: Specific, Measurable, Achievable, Relevant, and Time-bound. This section provides a comprehensive analysis of how the application meets each functional and non-functional requirement.
+
+\subsection{Functional Requirements Assessment}
+\subsubsection{Code Analysis and Optimization}
+
+\textbf{Specific}: The application's ability to analyze and optimize  code was tested with a variety of code samples. Each submission returned specific suggestions for improvement and potential error identifications.
+
+\textbf{Measurable}: The quality of optimization suggestions was measured by comparing the execution time and efficiency of the original and optimized code. The reductions in execution time and resource utilization were significant in most cases.
+
+\textbf{Achievable}: The application successfully provided optimization suggestions for all tested code samples, demonstrating the feasibility of the functionality.
+
+\textbf{Relevant}: This feature directly contributes to sustainable coding practices by enhancing code efficiency, aligning with SDG 12: Responsible Consumption and Production.
+
+\textbf{Time-bound}: The application processed and returned results within an acceptable timeframe, typically under a few seconds, ensuring a responsive user experience.
+
+\subsubsection{CO2 Emission Estimation}
+\textbf{Specific}: The CO2 emission estimations for both original and optimized code were specific and quantifiable, presented in a clear format to the user.
+
+\textbf{Measurable}: The emission estimates were measured in terms of the carbon footprint (in grams of CO2 equivalent), allowing users to objectively compare the environmental impact of different code versions.
+
+\textbf{Achievable}: All tested code samples successfully returned CO2 emission estimates, validating this functionality.
+
+\textbf{Relevant}: The emission estimates raise awareness about the environmental impact of computing, supporting the broader goal of environmental sustainability in IT.
+
+\textbf{Time-bound}: The CO2 emission estimation was provided concurrently with the code optimization results, maintaining an efficient response time.
+
+\subsection{Non-Functional Requirements Assessment}
+\subsubsection{Energy Efficiency}
+\textbf{Specific and Measurable}: The energy efficiency of the application itself was assessed by monitoring resource usage during operation. The server's CPU and memory usage remained low, indicating efficient resource utilization.
+
+\textbf{Achievable}: The lightweight design of the application, using Flask and minimal frontend resources, achieved the goal of low energy consumption.
+
+\textbf{Relevant}: Energy efficiency directly contributes to reducing the environmental impact of the application, in line with Green IT principles.
+
+\textbf{Time-bound}: Continuous monitoring during the testing phase confirmed consistent energy efficiency.
+
+\subsubsection{User Experience}
+\textbf{Specific and Measurable}: User experience was evaluated through a survey conducted with a group of test users. Feedback on the interface's ease of use, clarity, and responsiveness was overwhelmingly positive.
+
+\textbf{Achievable}: The straightforward design and clear instructions on the web interface were effective in providing a good user experience.
+
+\textbf{Relevant}: A positive user experience is crucial for the application's adoption and effective use, impacting its potential contribution to sustainable practices.
+
+\textbf{Time-bound}: User feedback was gathered throughout the development process, allowing for iterative improvements.
+
+\subsubsection{Environmental Impact}
+\textbf{Specific and Measurable}: The application's overall environmental impact was assessed by analyzing the energy consumption of the server and the CO2 emissions associated with its use.
+
+\textbf{Achievable}: By optimizing server resource usage and providing CO2 emission estimates, the application minimizes its environmental footprint.
+
+\textbf{Relevant}: Minimizing the environmental impact of software applications is a core aspect of Green IT and is directly aligned with the project's objectives.
+
+\textbf{Time-bound}: Ongoing monitoring and analysis ensure that the application maintains a low environmental impact.
+
+\subsection{Overall Assessment}
+In conclusion, the EcoCode prototype satisfactorily meets the established functional and non-functional requirements. While there is room for further enhancements, particularly in extending functionality and improving user interaction, the current prototype demonstrates a strong alignment with the goals of sustainable and efficient software development. Future iterations of the project will focus on expanding its capabilities and refining its user interface, all while maintaining its core commitment to sustainability and Green IT principles.
+
+\cleardoublepage
+\section*{Appendix}
+All images and additional material go there.
+
+
+
+\section*{Plagiarism statement}
+{\it This section is mandatory to be included without modifications in the submitted report.}\\
+
+I declare that I am aware of the following facts:
+\begin{itemize}
+    \item I understand that in the following statement the term "person" represents a human or \textbf{\textcolor{red}{ANY AUTOMATIC GENERATION SYTEM}}.
+	\item As a student at the University of Luxembourg I must respect the rules of intellectual honesty, in particular not to resort to plagiarism, fraud or any other method that is illegal or contrary to scientific integrity.
+	\item My report will be checked for plagiarism and if the plagiarism check is positive, an internal procedure will be started by my tutor. I am advised to request a pre-check by my tutor to avoid any issue.
+	\item As declared in the assessment procedure of the University of Luxembourg, plagiarism is committed whenever the source of information used in an assignment, research report, paper or otherwise published/circulated piece of work is not properly acknowledged. In other words, plagiarism is the passing off as one’s own the words, ideas or work of another person, without attribution to the author. The omission of such proper acknowledgement amounts to claiming authorship for the work of another person. Plagiarism is committed regardless of the language of the original work used. Plagiarism can be deliberate or accidental.
+Instances of plagiarism include, but are not limited to:
+\begin{enumerate}
+  \item Not putting quotation marks around a quote from another person’s work
+  \item Pretending to paraphrase while in fact quoting
+  \item Citing incorrectly or incompletely
+  \item Failing to cite the source of a quoted or paraphrased work
+  \item Copying/reproducing sections of another person’s work without acknowledging the source
+  \item Paraphrasing another person’s work without acknowledging the source
+  \item Having another person write/author a work for oneself and submitting/publishing it (with permission, with or without compensation) in one’s own name (‘ghost-writing’)
+  \item Using another person’s unpublished work without attribution and permission (‘stealing’)
+  \item Presenting a piece of work as one’s own that contains a high proportion of quoted/copied or paraphrased text (images, graphs, etc.), even if adequately referenced
+\end{enumerate}
+Auto- or self-plagiarism, that is the reproduction of (portions of a) text previously written by the author without citing that text, i.e. passing previously authored text as new, may be regarded as fraud if deemed sufficiently severe.
+\end{itemize}
+% end-of-plagiarism section
+
+\end{document}
