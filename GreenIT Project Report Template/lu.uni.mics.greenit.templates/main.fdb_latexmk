@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1702487553 "/home/typw/Downloads/Green IT/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" "main.pdf" "main" 1702487554 0
+["pdflatex"] 1703003231 "/home/typw/Downloads/Latex_Templates/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" "main.pdf" "main" 1703003232 0
   "/etc/texmf/web2c/texmf.cnf" 1698392203 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/typw/Downloads/Green IT/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" 1702487553 22151 bce20f288cbcfa41c983dcc3166967c4 ""
+  "/home/typw/Downloads/Latex_Templates/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" 1703003106 24052 30c6f54f48fd55bdad6c04471f14c592 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm" 1136768653 2520 53e01eef820ca829e42c1333c3fd02b9 ""
@@ -94,10 +94,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1693172360 40357 c95f5d5e031b5c7040b426833c11f2e0 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1698392981 4643645 d2d1d8b8ba87ed005f4aaf1ce646a79e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1698393096 7907541 187c86681e0489c3f4151bfaf823f584 ""
-  "IEEEtran.cls" 1701174186 201872 fbfc729022d9cfe60ace28af32972e5a ""
-  "main.aux" 1702487554 4321 ece96a3807530989b3445db8405f0c1a "pdflatex"
-  "main.out" 1702487554 4577 9fdb8185f0ef86ad376529e306e35bb1 "pdflatex"
-  "main.tex" 1702487553 22151 bce20f288cbcfa41c983dcc3166967c4 ""
+  "IEEEtran.cls" 1703003106 201872 fbfc729022d9cfe60ace28af32972e5a ""
+  "main.aux" 1703003232 4321 f5e9cbd0604c7e8a932ca7cf3963c1d9 "pdflatex"
+  "main.out" 1703003232 4577 9fdb8185f0ef86ad376529e306e35bb1 "pdflatex"
+  "main.tex" 1703003106 24052 30c6f54f48fd55bdad6c04471f14c592 ""
   (generated)
   "main.aux"
   "main.log"
