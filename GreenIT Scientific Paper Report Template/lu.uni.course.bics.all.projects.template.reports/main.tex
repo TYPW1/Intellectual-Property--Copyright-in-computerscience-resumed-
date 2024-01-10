@@ -5,6 +5,18 @@
 \usepackage{cite} 
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepgfplotslibrary{polar}
+\pgfplotsset{compat=1.17} 
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
 \begin{document}
 
@@ -15,13 +27,13 @@
 
 %current time
 {\small \today~-~\currenttime}}
- 
+
 % student name
 \author{\IEEEauthorblockN{TITCHEU YAMDJEU Pierre Wilfried}
-\IEEEauthorblockA{University of Luxembourg\\
-Email: pierre.titcheu.001@student.uni.lu}
-\\
-($\pm$ 5 pages)\\}
+	\IEEEauthorblockA{University of Luxembourg\\
+		Email: pierre.titcheu.001@student.uni.lu}
+	\\
+	($\pm$ 5 pages)\\}
 
 % make the title area
 \maketitle
@@ -29,26 +41,16 @@ Email: pierre.titcheu.001@student.uni.lu}
 % abstract
 \begin{abstract}
 
-This report provides a critical review of the paper ”How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?” by Aina Rasoldier et al. The paper evaluates the claims about digital solutions, particularly carpooling platforms, in reducing greenhouse gas (GHG) emissions, proposing guidelines for more realistic assessments.
+	This report conducts a critical review of "How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?" by Aina Rasoldier et al. The paper delves into the validity of claims surrounding digital technologies, particularly focusing on carpooling platforms, in their role of reducing greenhouse gas (GHG) emissions. It not only questions the prevailing assumptions but also proposes a set of guidelines for a more grounded and realistic assessment of these digital solutions in the context of environmental sustainability.
 
 \end{abstract}
 
 % Context
 \section{Introduction ($\pm 0,5p$)}
 
-The reviewed paper by Aina Rasoldier et al. explores
-the potential of digital technologies, particularly carpooling
-platforms, in mitigating greenhouse gas (GHG) emissions.
-Set against the backdrop of increasing digitalization and its
-environmental implications, the paper critically examines the
-prevailing assumptions about the efficacy of digital solutions
-in GHG reduction. The importance of this research lies in
-its relevance to GreenIT, a domain that emphasizes the role
-of technology in addressing environmental challenges. The
-paper aligns with the GreenIT perspective by scrutinizing the
-real-world impacts of digital technologies on the environment,
-underscoring the need for comprehensive evaluations beyond
-mere technological advancements.
+In their insightful paper, Aina Rasoldier et al.
+critically assess the potential of digital technologies
+in mitigating greenhouse gas (GHG) emissions, with a special focus on carpooling platforms. Amidst the growing digitalization of various sectors and its associated environmental impacts, the paper examines the prevalent belief that digital solutions can significantly contribute to GHG emission reduction. This research is pivotal as it intersects with the domain of GreenIT, which emphasizes leveraging technology to tackle environmental challenges. The authors delve into the real-world implications of digital technologies on environmental sustainability, highlighting the necessity for comprehensive assessments that extend beyond mere technological advancements. By scrutinizing the methodological approaches in current studies, this paper identifies significant gaps and proposes a set of guidelines to ensure more accurate evaluations. It underscores the importance of contextualizing these technologies within broader global strategies for GHG emission reduction, thereby contributing a nuanced perspective to the discourse on the role of digital solutions in climate change mitigation.
 
 % Research Problem 
 \section{Research problem addressed ($\pm 0,5p$)}
@@ -71,40 +73,36 @@ carpooling platforms.
 
 \section{Extended Literature Review (±1p)}
 
-The paper "How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?" by Aina Rasoldier et al. presents an in-depth analysis of the intersection between digital technologies and their role in mitigating greenhouse gas (GHG) emissions. This literature review delves deeper into the various sources and arguments presented in the paper, reflecting the complexity and multifaceted nature of the topic.
+The paper "How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?" by Aina Rasoldier et al. offers a nuanced critique of the existing literature at the intersection of digital technology and GHG emissions mitigation. The review situates the discussion within a historical context of environmental awareness and action, referencing pivotal moments like the United Nations Stockholm Conference on the Human Environment (1972) and the subsequent formation of the UNEP, charting the evolution of global environmental consciousness.
 
-At the core of the paper's argument is the relationship between digital technologies and the environment, specifically focusing on GHG emissions. The review begins by contextualizing this relationship within historical environmental movements and policies. It references the United Nations Stockholm Conference on the Human Environment (1972) and the establishment of the UNEP, highlighting how global environmental consciousness has evolved over decades.
+The Brundtland Report (1987) is significant for introducing the enduring concept of sustainable development, a key theme underlying the paper's focus. This concept, emphasizing the balance between current needs and future sustainability, is crucial in assessing the long-term viability of digital technologies.
 
-The Brundtland Report of 1987 is another critical piece of literature mentioned, which introduced the concept of sustainable development. This report's definition of sustainable development as meeting the needs of the present without compromising future generations is particularly relevant to the paper's focus on digital technologies. It underscores the importance of developing technologies that are environmentally sustainable.
+The United Nations Sustainable Development Goals (SDGs), particularly SDG 13 - Climate Action, provide a comprehensive framework for evaluating the alignment of digital solutions with global environmental objectives. This backdrop is essential for understanding the paper’s scrutiny of digital innovations in the context of climate action.
 
-The Sustainable Development Goals (SDGs) of the United Nations, especially SDG 13 - Climate Action, form a backdrop against which the paper evaluates digital solutions. The SDGs provide a globally recognized framework for assessing the effectiveness and alignment of digital innovations with environmental targets.
+The methodology of Life Cycle Assessment (LCA), as outlined by ISO 14040 and ISO 14044, is a critical tool referenced in the paper. LCA enables an all-encompassing evaluation of the environmental impact of technologies throughout their entire lifecycle. This approach is integral to understanding the complete environmental implications of digital solutions.
 
-In its exploration of environmental assessments, the paper draws upon methodologies like Life Cycle Assessment (LCA), as defined by ISO 14040 and ISO 14044. LCA offers a comprehensive approach for evaluating the environmental impact of technologies, encompassing their entire life cycle. This methodology is crucial for understanding the full environmental footprint of digital solutions, from production to disposal.
+The European Green Deal, aiming for climate neutrality by 2050, reflects the policy context influencing the development and adoption of digital technologies. The integration of digital strategies within environmental policies, as advocated by the Green Deal, resonates with the paper's examination of digital approaches to GHG mitigation.
 
-The European Green Deal is another pivotal point of reference, reflecting the policy landscape shaping the development and deployment of digital technologies. The Green Deal's emphasis on achieving climate neutrality by 2050 and integrating digital strategies into environmental policies aligns with the paper's exploration of digital solutions for GHG mitigation.
+The paper delves into the distinction between Green IT and IT for Green, elucidating the dual role of digital technologies in environmental sustainability. While Green IT focuses on making IT infrastructure sustainable, IT for Green highlights the application of IT in enhancing broader environmental sustainability.
 
-A significant aspect of the literature review is the discussion around Green IT and IT for Green. This distinction is crucial for understanding the dual role of digital technologies. Green IT focuses on the sustainability of IT systems themselves, while IT for Green emphasizes the use of IT in promoting broader environmental sustainability.
-
-Furthermore, the paper touches upon the challenges and considerations involved in assessing the benefits of digital solutions for GHG mitigation. It critically examines the scenarios and methodologies used in existing literature, highlighting the need for detailed and context-specific evaluations. This includes an analysis of the potential overestimation of digital solutions' benefits and the importance of integrating them into realistic and comprehensive strategies for GHG reduction.
-
-In summary, the extended literature review in Rasoldier et al.'s paper presents a thorough exploration of the multifaceted relationship between digital technologies and environmental sustainability. By integrating historical perspectives, methodological frameworks, policy contexts, and critical analyses of existing literature, the review provides a comprehensive foundation for understanding and evaluating the claims about the benefits of digital technologies for GHG emissions mitigation.
+A substantial portion of the literature review is devoted to critiquing the methods used in existing studies for evaluating digital solutions' environmental benefits. The paper underscores the necessity for detailed, context-specific assessments and cautions against the overestimation of the benefits of digital solutions. It emphasizes the integration of these technologies into realistic and comprehensive strategies for GHG reduction, challenging the simplistic narratives often presented in the literature.
 
 % Contributions 
 \section{Scientific contributions w.r.t. GreenIT and IT for Green ($\pm 2p$)}
 
 \subsection{Introduction to the Interplay between GreenIT and IT for Green}
 
-The paper "How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation?" by Aina Rasoldier et al. provides a comprehensive analysis of the role of digital technologies in environmental sustainability. This analysis bridges the concepts of GreenIT, which focuses on the sustainability of information technology itself, and IT for Green, which emphasizes the use of IT to support environmental sustainability across various sectors.
+The paper by Rasoldier et al. delves deeply into the intertwined roles of Green Information Technology (GreenIT) and Information Technology for Green (IT for Green) in advancing environmental sustainability. It emphasizes how IT, traditionally seen as a contributor to ecological problems, also holds significant potential for environmental conservation and GHG emissions reduction. By exploring various digital solutions, including carpooling platforms, the study illuminates the complex yet pivotal role of technology in both exacerbating and alleviating environmental challenges. This section could benefit from a focus on the paper's critical analysis of common misconceptions and overestimations regarding the environmental benefits of digital technologies. It also stresses the importance of adopting a balanced and realistic approach in assessing the environmental impacts of such technologies.
 
 \subsection{Detailed Examination of GreenIT}
 
 \subsubsection{Life Cycle Assessment and Sustainability of ICT}
 
-The paper delves into the Life Cycle Assessment (LCA) of digital technologies, echoing the ISO standards 14040 and 14044 discussed in the lecture. This assessment extends from the manufacturing phase to the disposal of IT systems, addressing the entire spectrum of environmental impacts associated with ICT. The paper’s focus on the life-cycle impacts highlights the importance of considering the direct effects of providing ICT services, including the production, use, transport, and end-of-life stages. This comprehensive approach aligns with the  emphasis on multi-criteria assessment methods that evaluate multiple environmental impact indicators, including GHG emissions, resource consumption, and waste generation.
+The paper presents a critical analysis of the Life Cycle Assessment (LCA) of ICT, adhering to ISO standards 14040 and 14044. It emphasizes the holistic environmental impact of ICT, from production to disposal. The focus on life-cycle impacts underlines the significance of direct effects of ICT services. By incorporating multi-criteria assessment methods, the paper broadens the scope of evaluating environmental impacts, including GHG emissions, resource consumption, and waste generation, aligning with global sustainability goals.
 
 \subsubsection{Green Standards and Metrics in ICT}
 
-Further contributing to the understanding of GreenIT, the paper discusses the need for robust methodologies to measure the environmental impacts of ICT. This includes a detailed analysis of GHG emissions and energy use, which are pivotal metrics in assessing the sustainability of IT systems. The paper's approach to evaluating these metrics is consistent with the  discussion on the main metrics for GreenIT, such as primary energy consumption and greenhouse gas emissions. By scrutinizing these metrics, the paper enhances our understanding of the environmental footprint of digital solutions, an aspect crucial to the development of sustainable IT systems.
+The research further elucidates the importance of robust methodologies in measuring ICT's environmental impacts. It delves into the critical analysis of GHG emissions and energy use, core metrics for GreenIT sustainability. This approach aligns with the main metrics discussed for GreenIT, such as primary energy consumption and greenhouse gas emissions. The detailed examination of these metrics in the paper enhances our understanding of the environmental footprint of digital technologies, pivotal for the development of sustainable IT systems.
 
 \subsection{Contributions to IT for Green}
 
@@ -114,7 +112,9 @@ In the realm of IT for Green, the paper explores how digital technologies can ai
 
 \subsubsection{Balancing GreenIT and IT for Green}
 
-The paper acknowledges the potential trade-offs between the environmental impact of developing and using digital technologies (GreenIT) and the benefits these technologies can offer in terms of environmental sustainability (IT for Green). This nuanced perspective recognizes the complexities in aligning IT with environmental goals and reflects the concepts covered in the lecture on the interplay between GreenIT and IT for Green.
+The paper addresses the balance between the environmental costs of developing and using digital technologies (GreenIT) and their benefits for environmental sustainability (IT for Green). This perspective acknowledges the complex relationship between IT and environmental goals, as discussed in the lecture on GreenIT and IT for Green interplay.
+
+In section 4.2, the paper details the scenarization process for evaluating GHG emissions in the mobility sector, focusing on carpooling platforms. It contrasts scenarios with and without platform-enabled carpooling to assess avoided emissions. The paper also highlights the challenges in quantifying the emissions of digital infrastructure due to lack of data and varying platform types. This nuanced approach underscores the complexity of accurately measuring the environmental impact of digital solutions and the importance of comprehensive scenario analysis in sustainability assessments.
 
 \subsection{Evaluation of Digital Technologies' Impact on GHG Mitigation}
 
@@ -124,7 +124,14 @@ The paper critically examines the often-stated benefits of digital technologies 
 
 \subsubsection{Methodological Rigor in Assessments}
 
-In line with the  focus on methodological rigor, the paper proposes guidelines for studies evaluating the impact of digital solutions on GHG emissions. These guidelines stress the importance of life-cycle analysis, consideration of structural impacts, and the connection of proposed solutions with global sustainability goals. This approach is crucial for ensuring that the evaluations of digital technologies' contributions to GHG reduction are comprehensive and grounded in reality.
+In line with the  focus on methodological rigor, the paper proposes guidelines for studies evaluating the impact of digital solutions on GHG emissions. These guidelines include:
+\begin{enumerate}
+	\item \textbf{Life-Cycle Analysis (LCA)}: Emphasizes the importance of using LCA, as per ISO standards 14040 and 14044, to assess the full environmental impact of digital technologies from production to disposal.
+	\item \textbf{Structural Effects}: Addresses the need to consider broader impacts, including second-order effects and structural changes in systems and processes.
+	\item \textbf{Scenarization}: Advocates for creating multiple scenarios to predict and assess the potential impacts of digital solutions on GHG emissions accurately.
+	\item \textbf{Global Sustainability Objectives}: Stresses the importance of aligning digital solutions with broader environmental goals and sustainability objectives.
+\end{enumerate}
+These guidelines stress the importance of life-cycle analysis, consideration of structural impacts, and the connection of proposed solutions with global sustainability goals. This approach is crucial for ensuring that the evaluations of digital technologies' contributions to GHG reduction are comprehensive and grounded in reality.
 
 \subsection{Implications for Policy and Strategy}
 
@@ -134,7 +141,7 @@ The paper's findings have implications for the regulation of the ICT sector and 
 
 \subsubsection{Identifying Research Gaps and Future Directions}
 
-The paper also identifies overlooked research directions in the field of GreenIT and IT for Green. This is in harmony with the  call for continuous exploration and innovation in the field. By pointing out the gaps in current research, the paper sets the stage for future studies that can further enhance our understanding of the interplay between ICT and environmental sustainability.
+The paper highlights key research gaps in the field of GreenIT and IT for Green, emphasizing the need for ongoing exploration and innovation. It identifies specific areas where current research is lacking, such as the comprehensive assessment of the environmental impact of ICT through Life Cycle Assessment, understanding the structural and second-order effects of digital solutions, and the development of more accurate scenarization methodologies. These identified gaps pave the way for future research to deepen our understanding of the relationship between ICT and environmental sustainability, and to develop more effective strategies for leveraging technology in achieving sustainability goals.
 
 \subsection{Real-world Applications and Case Studies}
 
@@ -174,11 +181,7 @@ The paper's findings highlight the delicate balance between advancing digital te
 
 \subsubsection{Guiding Future Research and Development}
 
-The research provides valuable insights for future studies in GreenIT and IT for Green. By identifying current limitations and proposing guidelines for more rigorous assessments, the paper sets a direction for future research. This is in line with the  call for continuous innovation and improvement in the field of IT sustainability.
-
-\subsection{Conclusion}
-
-In summary, the paper's scientific contributions are significant in advancing the understanding and application of GreenIT and IT for Green principles. By providing a critical evaluation of digital technologies in GHG mitigation, proposing methodological guidelines, and aligning with global sustainability goals, the research enriches the discourse on environmental sustainability in the realm of IT.
+The research offers crucial insights for future studies in GreenIT and IT for Green, particularly in addressing current limitations and proposing development paths. It underscores the modest contribution of digital solutions like carpooling platforms to GHG mitigation and the need for more effective strategies. Future research should focus on overcoming obstacles to widespread adoption of such technologies and minimizing negative structural effects. Additionally, there is a significant research gap in understanding the specific impacts of digital platforms on global GHG mitigation scenarios, as well as in identifying and tackling the barriers to their effectiveness. The paper calls for a systematic review of strategies to enhance carpooling and other digital solutions, considering behavioral and logistical challenges, to meaningfully contribute to climate change mitigation.
 
 % Analysis and discussion 
 \section{Critical Analysis ($\pm 1p$)}
@@ -304,39 +307,50 @@ Overall, the paper makes a significant contribution to understanding the role of
 \section*{References}
 
 \begin{enumerate}
-  \item Rasoldier, A., Combaz, J., Girault, A., Marquet, K., \& Quinton, S. (2022). How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation? In LIMITS '22: Workshop on Computing within Limits, June 21–22, 2022.
-  \item Brundtland, G. H. (1987). Report of the World Commission on Environment and Development: Our Common Future. United Nations.
-  \item United Nations. (1972). Declaration of the United Nations Conference on the Human Environment.
-  \item United Nations Environment Programme (UNEP). (2015). Sustainable Development Goals (SDG).
-  \item Calero, C., \& Piattini, M. (2015). Introduction to Green in Software Engineering. Green IT.
-  \item Murugesan, S. (2008). Harnessing Green IT: Principles and Practices. IT Professional, 10(1), 24-33.
-  \item European Commission. (2019). The European Green Deal, COM(2019) 640 final.
-  \item Luxembourg National Research and Innovation Strategy. (2020). NATIONAL RESEARCH AND INNOVATION STRATEGY FOR LUXEMBOURG 2020-02.
-  \item Climate Watch. (2019). Global GHG Emissions Data.
-  \item International Standards Organization (ISO). (2006). ISO 14040:2006 - Environmental management - Life cycle assessment - Principles and framework.
-  \item International Standards Organization (ISO). (2006). ISO 14044:2006 - Environmental management - Life cycle assessment - Requirements and guidelines.
+	\item Rasoldier, A., Combaz, J., Girault, A., Marquet, K., \& Quinton, S. (2022). How realistic are claims about the benefits of using digital technologies for GHG emissions mitigation? In LIMITS '22: Workshop on Computing within Limits, June 21–22, 2022.
+	\item Brundtland, G. H. (1987). Report of the World Commission on Environment and Development: Our Common Future. United Nations.
+	\item United Nations. (1972). Declaration of the United Nations Conference on the Human Environment.
+	\item United Nations Environment Programme (UNEP). (2015). Sustainable Development Goals (SDG).
+	\item Calero, C., \& Piattini, M. (2015). Introduction to Green in Software Engineering. Green IT.
+	\item Murugesan, S. (2008). Harnessing Green IT: Principles and Practices. IT Professional, 10(1), 24-33.
+	\item European Commission. (2019). The European Green Deal, COM(2019) 640 final.
+	\item Luxembourg National Research and Innovation Strategy. (2020). NATIONAL RESEARCH AND INNOVATION STRATEGY FOR LUXEMBOURG 2020-02.
+	\item Climate Watch. (2019). Global GHG Emissions Data.
+	\item International Standards Organization (ISO). (2006). ISO 14040:2006 - Environmental management - Life cycle assessment - Principles and framework.
+	\item International Standards Organization (ISO). (2006). ISO 14044:2006 - Environmental management - Life cycle assessment - Requirements and guidelines.
 \end{enumerate}
 
 % Appendix 
 \cleardoublepage
 \section*{Appendix ($\pm 2p$)}
 \subsection*{Additional Material}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/fig1.jpg}
+	\caption{An illustration demonstrating the greenhouse effect, a natural phenomenon essential for life on Earth. Source: Adobe Stock.}
+	\label{fig:Greenhouse Effect Illustration}
+\end{figure}
 
-\subsubsection*{Figure 1: Greenhouse Effect Illustration}
-\textit{An illustration demonstrating the greenhouse effect, a natural phenomenon essential for life on Earth. Source: Adobe Stock.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/fig2.png}
+	\caption{Graphic representation of the 17 Sustainable Development Goals set by the United Nations in 2015, focusing on various global challenges including environmental sustainability.}
+	\label{fig:Sustainable Development Goals (SDG)}
+\end{figure}
 
-\subsubsection*{Figure 2: Sustainable Development Goals (SDG)}
-\textit{Graphic representation of the 17 Sustainable Development Goals set by the United Nations in 2015, focusing on various global challenges including environmental sustainability.}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/fig3.jpg}
+	\caption{modal share results for the regions Isère and Loire-Atlantique. The graph shows the percentage distribution for different modes of transportation - car, public transport (pt), and soft modes - in each region. }
+	\label{fig:modal_shared_results}
+\end{figure}
 
-\subsubsection*{Figure 3: Green IT and IT for Green}
-\textit{A diagram explaining the two main aspects of sustainability in relation to IT: 'Green IT' focusing on the sustainability of IT itself, and 'IT for Green' emphasizing IT solutions that enhance environmental sustainability.}
-
-\subsubsection*{Figure 4: Life Cycle Assessment (LCA) Categories}
-\textit{A chart depicting the 16 indicators used in Life Cycle Assessment (LCA) for evaluating the environmental impact of products and services. Source: "Understanding and PEF and OEF methods" (European Commission, 2021).}
-
-\subsubsection*{Table 1: Electricity Mix Production in EU and Luxembourg}
-\textit{Data table comparing the composition of electricity mix production in the European Union and Luxembourg, detailing the percentages of non-renewable fossil fuels, renewable energy sources, and nuclear energy. Source: ILR, Luxembourg Regulatory Institute.}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{images/fig4.png}
+	\caption{A cimage depicting the  indicators used in Life Cycle Assessment (LCA) for evaluating the environmental impact of cars Source: "Europeen Platform on Lifecycle Assesment"}
+	\label{fig:Life Cycle Assessment (LCA) Categories}
+\end{figure}
 
 %plagiarism section - mandatory - do not remove, do not modify the content
 \section*{Plagiarism statement}
@@ -344,23 +358,23 @@ Overall, the paper makes a significant contribution to understanding the role of
 
 I declare that I am aware of the following facts:
 \begin{itemize}
-    \item I understand that in the following statement the term "person" represents a human or \textbf{\textcolor{red}{ANY AUTOMATIC GENERATION SYTEM}}.
+	\item I understand that in the following statement the term "person" represents a human or \textbf{\textcolor{red}{ANY AUTOMATIC GENERATION SYTEM}}.
 	\item As a student at the University of Luxembourg I must respect the rules of intellectual honesty, in particular not to resort to plagiarism, fraud or any other method that is illegal or contrary to scientific integrity.
 	\item My report will be checked for plagiarism and if the plagiarism check is positive, an internal procedure will be started by my tutor. I am advised to request a pre-check by my tutor to avoid any issue.
 	\item As declared in the assessment procedure of the University of Luxembourg, plagiarism is committed whenever the source of information used in an assignment, research report, paper or otherwise published/circulated piece of work is not properly acknowledged. In other words, plagiarism is the passing off as one’s own the words, ideas or work of another person, without attribution to the author. The omission of such proper acknowledgement amounts to claiming authorship for the work of another person. Plagiarism is committed regardless of the language of the original work used. Plagiarism can be deliberate or accidental.
-Instances of plagiarism include, but are not limited to:
-\begin{enumerate}
-  \item Not putting quotation marks around a quote from another person’s work
-  \item Pretending to paraphrase while in fact quoting
-  \item Citing incorrectly or incompletely
-  \item Failing to cite the source of a quoted or paraphrased work
-  \item Copying/reproducing sections of another person’s work without acknowledging the source
-  \item Paraphrasing another person’s work without acknowledging the source
-  \item Having another person write/author a work for oneself and submitting/publishing it (with permission, with or without compensation) in one’s own name (‘ghost-writing’)
-  \item Using another person’s unpublished work without attribution and permission (‘stealing’)
-  \item Presenting a piece of work as one’s own that contains a high proportion of quoted/copied or paraphrased text (images, graphs, etc.), even if adequately referenced
-\end{enumerate}
-Auto- or self-plagiarism, that is the reproduction of (portions of a) text previously written by the author without citing that text, i.e. passing previously authored text as new, may be regarded as fraud if deemed sufficiently severe.
+	      Instances of plagiarism include, but are not limited to:
+	      \begin{enumerate}
+		      \item Not putting quotation marks around a quote from another person’s work
+		      \item Pretending to paraphrase while in fact quoting
+		      \item Citing incorrectly or incompletely
+		      \item Failing to cite the source of a quoted or paraphrased work
+		      \item Copying/reproducing sections of another person’s work without acknowledging the source
+		      \item Paraphrasing another person’s work without acknowledging the source
+		      \item Having another person write/author a work for oneself and submitting/publishing it (with permission, with or without compensation) in one’s own name (‘ghost-writing’)
+		      \item Using another person’s unpublished work without attribution and permission (‘stealing’)
+		      \item Presenting a piece of work as one’s own that contains a high proportion of quoted/copied or paraphrased text (images, graphs, etc.), even if adequately referenced
+	      \end{enumerate}
+	      Auto- or self-plagiarism, that is the reproduction of (portions of a) text previously written by the author without citing that text, i.e. passing previously authored text as new, may be regarded as fraud if deemed sufficiently severe.
 \end{itemize}
 
 \cleardoublepage
