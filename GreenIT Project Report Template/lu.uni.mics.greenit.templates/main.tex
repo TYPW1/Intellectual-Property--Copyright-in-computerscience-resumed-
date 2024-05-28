@@ -366,12 +366,11 @@ The sequence diagram illustrates the step-by-step interaction flow from the user
 \subsection{Integration with OpenAI and CodeCarbon}
 A key feature of EcoCode is its integration with external APIs for code optimization and CO2 emission estimation.
 
-\subsection{Integration with OpenAI and CodeCarbon}
-A key feature of EcoCode is its integration with external APIs for code optimization and CO2 emission estimation.
-
 \textbf{OpenAI API}: The application utilizes OpenAI's GPT-4 model for analyzing and suggesting optimizations for the submitted code. GPT-4's advanced natural language processing capabilities enable it to understand and process code efficiently, providing valuable insights and optimization suggestions.
 
 \textbf{CodeCarbon}: For estimating the CO2 emissions associated with running the original and optimized code, EcoCode integrates with the CodeCarbon API. CodeCarbon offers a way to estimate the energy consumption and carbon footprint of computing tasks, which is crucial for assessing the environmental impact of software.
+
+\textbf{Matplotlib for Visualization}: To present the performance metrics, EcoCode uses Matplotlib to generate graphs that illustrate the CO2 emissions, execution time, and energy consumption before and after optimization. This visualization helps users comprehend the impact of their code optimizations in a clear and informative manner.
 
 \subsection{Data Flow}
 The data flow within EcoCode is streamlined for efficiency and clarity. When a user submits code via the frontend, the request is sent to the Flask server. The server then forwards the code to the OpenAI API for analysis. The response from OpenAI, containing optimization suggestions, is processed by the server and combined with CO2 emission estimates obtained from CodeCarbon. The consolidated results are then sent back to the frontend for display to the user.
@@ -512,12 +511,14 @@ The assessment of EcoCode critically evaluates its deliverables against the esta
 \paragraph{Metrics Values and Calculation Methodology:}
 Detailed explanations for each metric are provided, including the rationale behind their selection and how they were calculated. Visual aids such as charts and graphs are used to present the data clearly.
 
-
 \paragraph{Comparative Analysis:}
 A comparative analysis section is included, comparing EcoCode's performance and environmental impact against other similar tools and industry standards.
 
 \paragraph{Advanced Analytics:}
 Advanced analytics features provide users with detailed reports on their coding practices, optimization trends, and environmental impact over time.
+
+\paragraph{Visualization of Metrics:}
+EcoCode visualizes the performance metrics using Matplotlib, displaying execution time, CO2 emissions, and energy consumption before and after optimization. This helps in providing a clear and comprehensive view of the improvements made by the tool. The visualizations are updated in real-time to reflect the latest data from the user's code submissions.
 
 By providing these detailed explanations, visual aids, and comparative analysis, the assessment of EcoCode's sustainability is made more comprehensive and informative.
 
@@ -545,6 +546,17 @@ By providing these detailed explanations, visual aids, and comparative analysis,
 
 \textbf{Time-bound}: The CO2 emission estimation was provided concurrently with the code optimization results, maintaining an efficient response time.
 
+\subsubsection{Performance Metrics Visualization}
+\textbf{Specific}: The application generates visualizations to help users understand the performance impact of their code optimizations.
+
+\textbf{Measurable}: Displays graphs comparing execution time, CO2 emissions, and energy consumption before and after optimization.
+
+\textbf{Achievable}: Utilizes Matplotlib for creating clear and informative visual representations of the data.
+
+\textbf{Relevant}: Helps users see the tangible benefits of optimizing their code in terms of both performance and environmental impact.
+
+\textbf{Time-bound}: Visualizations are generated immediately after the analysis and optimization process, providing real-time feedback.
+
 \subsection{Non-Functional Requirements Assessment}
 \subsubsection{Energy Efficiency}
 \textbf{Specific and Measurable}: The energy efficiency of the application itself was assessed by monitoring resource usage during operation. The server's CPU and memory usage remained low, indicating efficient resource utilization. Resource utilization is a critical non-functional requirement, with Figure \ref{fig:resource_usage} demonstrating the reduction in server time and electricity consumption.
@@ -569,7 +581,14 @@ By providing these detailed explanations, visual aids, and comparative analysis,
 
 \textbf{Achievable}: By optimizing server resource usage and providing CO2 emission estimates, the application minimizes its environmental footprint.
 
-\textbf{Relevant}: Minimizing the environmental impact of software applications is a core aspect of Green IT and is directly aligned with the project's objectives
+\textbf{Relevant}: Minimizing the environmental impact of software applications is a core aspect of Green IT and is directly aligned with the project's objectives.
+
+\subsection{Comparative Analysis of GPT-4 with Other Tools}
+To evaluate GPT-4's performance and environmental impact against other tools, a comparative analysis was conducted using sample data collected from experiments. The tools compared include GPT-4, Human Optimization, IntelliCode, TabNine, and SonarQube. The comparison focused on four key metrics: CO2 Emissions, Execution Time, Energy Consumption, and Optimization Effectiveness.
+
+
+The results of the comparative analysis in figures \ref{fig:execution_time_comparison} \ref{fig:energy_consumption_comparison} \ref{fig:optimization_effectiveness_comparison} \ref{fig:co2_emissions_comparison} show that GPT-4 outperforms other tools in terms of CO2 emissions, execution time, and optimization effectiveness, making it a superior choice for sustainable code optimization. The visualizations provide a clear and comprehensive view of the advantages of using GPT-4 over other alternatives.
+
 \cleardoublepage
 \section*{Appendix}
 
@@ -700,6 +719,38 @@ By providing these detailed explanations, visual aids, and comparative analysis,
 	\includegraphics[width=\linewidth]{figures/Sequence Diagram.png}
 	\caption{Sequence Diagram of User Interaction with EcoCode System}
 	\label{fig:sequence_diagram}
+\end{figure}
+
+\paragraph{CO2 Emissions:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/co2_emissions_comparison.png}
+    \caption{CO2 Emissions Comparison}
+    \label{fig:co2_emissions_comparison}
+\end{figure}
+
+\paragraph{Execution Time:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/execution_time_comparison.png}
+    \caption{Execution Time Comparison}
+    \label{fig:execution_time_comparison}
+\end{figure}
+
+\paragraph{Energy Consumption:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/energy_consumption_comparison.png}
+    \caption{Energy Consumption Comparison}
+    \label{fig:energy_consumption_comparison}
+\end{figure}
+
+\paragraph{Optimization Effectiveness:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{figures/optimization_effectiveness_comparison.png}
+    \caption{Optimization Effectiveness Comparison}
+    \label{fig:optimization_effectiveness_comparison}
 \end{figure}
 
 \section*{Plagiarism statement}

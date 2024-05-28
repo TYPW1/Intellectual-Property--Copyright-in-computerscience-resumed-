@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1716817995 "/home/typw/Downloads/Latex_Templates/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" "main.pdf" "main" 1716817997 0
+["pdflatex"] 1716901216 "/home/typw/Downloads/Latex_Templates/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" "main.pdf" "main" 1716901219 0
   "/etc/texmf/web2c/texmf.cnf" 1698392203 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/typw/Downloads/Latex_Templates/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" 1716817992 45046 e6911f7f08a65a06a8de79299337c14d ""
+  "/home/typw/Downloads/Latex_Templates/GreenIT Project Report Template/lu.uni.mics.greenit.templates/main.tex" 1716901216 48282 f0158f18976fbbe7218078424695044c ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -225,9 +225,13 @@
   "figures/Frontend.png" 1716636788 55229 56b997886224c3bc5699d1d1051f1ffa ""
   "figures/SDG.png" 1716636788 279870 4118e15e6abef42acd309e1404683c4f ""
   "figures/Sequence Diagram.png" 1716636788 99994 0f76ec32cd17803a6cf09a5cc6bc8e51 ""
-  "main.aux" 1716817997 10630 f0bd69b6c95261c3a358e969b676c2e4 "pdflatex"
-  "main.out" 1716817997 6524 37c02e510b28d5f1b28e3a3c574b142d "pdflatex"
-  "main.tex" 1716817992 45046 e6911f7f08a65a06a8de79299337c14d ""
+  "figures/co2_emissions_comparison.png" 1716900841 20966 ec4c3b2a0d9953e91997774e37e12a45 ""
+  "figures/energy_consumption_comparison.png" 1716900881 30084 bd6c26f58657bb08fd86258ea8c6ff04 ""
+  "figures/execution_time_comparison.png" 1716900859 22427 834bc53bb53e93b8574cc3a6ae947f9e ""
+  "figures/optimization_effectiveness_comparison.png" 1716900902 23283 62b4bf915b023cb6b9dfc0d0167f798d ""
+  "main.aux" 1716901219 12688 a0794355582d6c0e5f833c8c1c7457df "pdflatex"
+  "main.out" 1716901219 6809 89ecb465d14b7611dfeae118877a4255 "pdflatex"
+  "main.tex" 1716901216 48282 f0158f18976fbbe7218078424695044c ""
   (generated)
   "main.aux"
   "main.log"

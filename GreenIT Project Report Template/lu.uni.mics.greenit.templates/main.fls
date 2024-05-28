@@ -393,19 +393,19 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -426,6 +426,26 @@ INPUT ./figures/Sequence Diagram.png
 INPUT ./figures/Sequence Diagram.png
 INPUT ./figures/Sequence Diagram.png
 INPUT ./figures/Sequence Diagram.png
+INPUT ./figures/co2_emissions_comparison.png
+INPUT ./figures/co2_emissions_comparison.png
+INPUT ./figures/co2_emissions_comparison.png
+INPUT ./figures/co2_emissions_comparison.png
+INPUT ./figures/co2_emissions_comparison.png
+INPUT ./figures/execution_time_comparison.png
+INPUT ./figures/execution_time_comparison.png
+INPUT ./figures/execution_time_comparison.png
+INPUT ./figures/execution_time_comparison.png
+INPUT ./figures/execution_time_comparison.png
+INPUT ./figures/energy_consumption_comparison.png
+INPUT ./figures/energy_consumption_comparison.png
+INPUT ./figures/energy_consumption_comparison.png
+INPUT ./figures/energy_consumption_comparison.png
+INPUT ./figures/energy_consumption_comparison.png
+INPUT ./figures/optimization_effectiveness_comparison.png
+INPUT ./figures/optimization_effectiveness_comparison.png
+INPUT ./figures/optimization_effectiveness_comparison.png
+INPUT ./figures/optimization_effectiveness_comparison.png
+INPUT ./figures/optimization_effectiveness_comparison.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
