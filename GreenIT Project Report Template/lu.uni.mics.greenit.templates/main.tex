@@ -72,7 +72,7 @@ EcoCode is equipped with functionalities that significantly contribute to sustai
 	      \end{itemize}
 	\item \textbf{CO2 Emission Estimation}
 	      \begin{itemize}
-		      \item \textit{Specific}: Estimates the CO2 emissions associated with the execution of both the original and optimized code.
+		      \item \textit{Specific}: Estimates the CO2 emissions associated with the execution of both the original and optimized code. It also calculates CO2 emmision and execution time for GPT optimization.
 		      \item \textit{Measurable}: Provides emissions data in kilograms (kg) with up to 11 decimal places.
 		      \item \textit{Achievable}: Utilizes a sophisticated model to calculate the environmental impact.
 		      \item \textit{Relevant}: Makes the abstract notion of energy efficiency more tangible and understandable for the user.
@@ -179,8 +179,8 @@ The results are compared against industry benchmarks to contextualize the perfor
 Several case studies are included to demonstrate the practical impact of EcoCode. These case studies provide before-and-after comparisons for typical coding tasks, showcasing the environmental benefits of using the tool.
 
 \begin{itemize}
-  \item \textbf{Case Study 1:} Optimization of a data processing script.
-  \item \textbf{Case Study 2:} Refactoring of a machine learning model training pipeline.
+	\item \textbf{Case Study 1:} Optimization of a data processing script.
+	\item \textbf{Case Study 2:} Refactoring of a machine learning model training pipeline.
 \end{itemize}
 
 The inclusion of these detailed metrics and case studies strengthens the evaluation methodology and provides concrete proof of the tool's impact.
@@ -227,7 +227,7 @@ Validation of the CO2 emission estimates and energy consumption metrics by third
 Detailed documentation of the testing process, including edge cases, diverse coding languages, and real-world usage scenarios. This ensures that the green initiatives are robust and scalable.
 
 \begin{quote}
-\textit{"EcoCode has significantly reduced the execution time and carbon footprint of our data processing scripts, helping us achieve our sustainability goals."} - Testimonial from a software development team.
+	\textit{"EcoCode has significantly reduced the execution time and carbon footprint of our data processing scripts, helping us achieve our sustainability goals."} - Testimonial from a software development team.
 \end{quote}
 
 By providing these additional proofs, the project demonstrates the realistic and pragmatic application of green requirements in diverse contexts.
@@ -383,7 +383,7 @@ Considering the nature of the application, security and scalability are key conc
 \subsection{Mathematical Notation}
 To quantify the efficiency of code optimizations, the following mathematical model is proposed:
 
-\textit{Efficiency Gain (E)} = \textit{Time Original (T\textsubscript{o})} / \textit{Time Optimized (T\textsubscript{opt})}
+\textit{Efficiency Gain (E)} = \(\frac{\textit{Time Original (T}_{o}\textit{)}}{\textit{Time Optimized (T}_{opt}\textit{)}}\)
 
 Where \textit{Time Original (T\textsubscript{o})} is the execution time of the original code, and \textit{Time Optimized (T\textsubscript{opt})} is the execution time after optimization. A higher value of \textit{E} indicates a more significant efficiency gain.
 
@@ -391,53 +391,64 @@ Where \textit{Time Original (T\textsubscript{o})} is the execution time of the o
 Consider a Python function for calculating the sum of the first N natural numbers. The original code uses a for loop, while the optimized code uses the arithmetic series formula.
 
 \textbf{Original Code:}
-\begin{verbatim}
+\begin{lstlisting}[language=Python, backgroundcolor=\color{lightgray}]
 def sum_natural_numbers(n):
     total = 0
     for i in range(1, n + 1):
         total += i
     return total
-\end{verbatim}
+\end{lstlisting}
 
 \textbf{Optimized Code:}
-\begin{verbatim}
+\begin{lstlisting}[language=Python, backgroundcolor=\color{lightgray}]
 def optimized_sum(n):
     return n * (n + 1) / 2
-\end{verbatim}
+\end{lstlisting}
 
 \textbf{Execution Time Measurement:}
-Using a stopwatch, the execution time for N = 10,000 was measured:
+Using Python's time module, the execution time for N = 10,000 was measured:
+\begin{lstlisting}[language=Python, backgroundcolor=\color{lightgray}]
+import time
 
-- Time Original (T\textsubscript{o}): 0.002 seconds
-- Time Optimized (T\textsubscript{opt}): 0.0001 seconds
+n = 10000
+
+# Measure execution time of the original code
+start_time_original = time.time()
+sum_natural_numbers(n)
+time_original = time.time() - start_time_original
+
+# Measure execution time of the optimized code
+start_time_optimized = time.time()
+optimized_sum(n)
+time_optimized = time.time() - start_time_optimized
+\end{lstlisting}
+
+- \textit{Time Original (T\textsubscript{o})}: 0.002 seconds
+- \textit{Time Optimized (T\textsubscript{opt})}: 0.0001 seconds
 
 \textbf{Efficiency Gain Calculation:}
-\textit{E} = $\frac{T_{o}}{T_{opt}} = \frac{0.002}{0.0001} = 20$
+\textit{E} = \(\frac{T_{o}}{T_{opt}} = \frac{0.002}{0.0001} = 20\)
 
-This implies that the optimized code is 20 times more efficient in terms of execution time.
+\subsection{Execution Time and Energy Usage Measurement}
+To measure the execution time and energy usage, the following approach is used in the code:
 
-\subsection{Compile Time and Energy Usage Measurement}
-To measure the compile time and energy usage, the following approach is used in the code:
-
-\begin{verbatim}
+\begin{lstlisting}[language=Python, backgroundcolor=\color{lightgray}]
 import time
 from codecarbon import EmissionsTracker
 
-def measure_compile_time_and_energy(code):
-    start_time = time.time()
-    # Assuming compile_code is a function that compiles the code
-    compile_code(code)
-    compile_time = time.time() - start_time
+def measure_execution_time_and_energy(code):
+start_time = time.time()
+execute_user_code(code)
+execution_time = time.time() - start_time
+tracker = EmissionsTracker()
+tracker.start()
+execute_user_code(code)
+emissions = tracker.stop()
 
-    tracker = EmissionsTracker()
-    tracker.start()
-    compile_code(code)
-    emissions = tracker.stop()
+return execution_time, emissions
+\end{lstlisting}
 
-    return compile_time, emissions
-\end{verbatim}
-
-This code snippet captures the compile time and energy usage for a given piece of code, using a timer and the CodeCarbon tracker.
+This code snippet captures the execution time and energy usage for a given piece of code, using a timer and the CodeCarbon tracker.
 
 \subsection{Overall}
 The architecture of EcoCode is designed to be simple yet effective, aligning with the principles of Green IT. The integration of Flask, OpenAI, and CodeCarbon, along with a user-friendly frontend, makes EcoCode a tool that not only aids in software optimization but also promotes awareness of environmental sustainability in software development.
@@ -449,8 +460,9 @@ The EcoCode project has been developed as a prototype to demonstrate the practic
 The backend of EcoCode serves as the core for processing user requests. It is written in  and utilizes Flask, a lightweight web framework, for handling HTTP requests and responses. The integration with OpenAI's GPT-4 API allows for the analysis and optimization of the submitted  code. Additionally, the CodeCarbon API is used to estimate the CO2 emissions associated with the execution of the original and optimized code.
 
 \textbf{Key Code Excerpts}:
-\begin{lstlisting}[language=]
-from flask import Flask, render_template, request
+\begin{lstlisting}[language=Python, backgroundcolor=\color{lightgray}]
+from flask import Flask, render_template,
+request
 from openai import OpenAI
 from codecarbon import EmissionsTracker
 
@@ -458,7 +470,8 @@ client = OpenAI(api_key='your_api_key')
 
 app = Flask(__name__)
 
-# Functions for code analysis and optimization
+# Functions for code analysis and 
+optimization
 def analyze_code(code):
     # ... function implementation ...
 
@@ -478,7 +491,8 @@ The frontend of EcoCode offers a user-friendly interface for submitting  code an
 The user interface of EcoCode, shown in Figure \ref{fig:frontend_screenshot}, has been designed to provide a seamless and intuitive user experience.
 
 \textbf{HTML Template Excerpt}:
-\begin{lstlisting}[language=HTML]
+\begin{lstlisting}[language=HTML, backgroundcolor=\color{lightgray}]
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -487,14 +501,15 @@ The user interface of EcoCode, shown in Figure \ref{fig:frontend_screenshot}, ha
 <body>
     <!-- Form for code input -->
     <form method="POST">
-        <textarea name="code_input" rows="10" 
+        <textarea name="code_input" 
+		rows="10" 
         cols="50"></textarea>
-        <input type="submit" value="Optimized Code">
+        <input type="submit" value=
+		"Optimized Code">
     </form>
-
-    <!-- Display area for original 
-    and optimized code -->
-    <!-- ... HTML content ... -->
+<!-- Display area for original 
+and optimized code -->
+<!-- ... HTML content ... -->
 </body>
 </html>
 \end{lstlisting}
@@ -508,80 +523,90 @@ The assessment of EcoCode critically evaluates its deliverables against the esta
 \subsection{Sustainability Assessment wrt Requirements}
 \label{sec:sustainability_assessment}
 
-\paragraph{Metrics Values and Calculation Methodology:}
-Detailed explanations for each metric are provided, including the rationale behind their selection and how they were calculated. Visual aids such as charts and graphs are used to present the data clearly.
+\begin{itemize}
+	\item \textbf{Metrics Values and Calculation Methodology:} Detailed explanations for each metric are provided, including the rationale behind their selection and how they were calculated. Visual aids such as charts and graphs are used to present the data clearly.
 
-\paragraph{Comparative Analysis:}
-A comparative analysis section is included, comparing EcoCode's performance and environmental impact against other similar tools and industry standards.
+	\item \textbf{Comparative Analysis:} A comparative analysis section is included, comparing EcoCode's performance and environmental impact against other similar tools and industry standards.
 
-\paragraph{Advanced Analytics:}
-Advanced analytics features provide users with detailed reports on their coding practices, optimization trends, and environmental impact over time.
+	\item \textbf{Advanced Analytics:} Advanced analytics features provide users with detailed reports on their coding practices, optimization trends, and environmental impact over time.
 
-\paragraph{Visualization of Metrics:}
-EcoCode visualizes the performance metrics using Matplotlib, displaying execution time, CO2 emissions, and energy consumption before and after optimization. This helps in providing a clear and comprehensive view of the improvements made by the tool. The visualizations are updated in real-time to reflect the latest data from the user's code submissions.
+	\item \textbf{Visualization of Metrics:} EcoCode visualizes the performance metrics using Matplotlib, displaying execution time, CO2 emissions, and energy consumption before and after optimization. This helps in providing a clear and comprehensive view of the improvements made by the tool. The visualizations are updated in real-time to reflect the latest data from the user's code submissions.
+\end{itemize}
+
 
 By providing these detailed explanations, visual aids, and comparative analysis, the assessment of EcoCode's sustainability is made more comprehensive and informative.
 
 \subsection{Functional Requirements Assessment}
 \subsubsection{Code Analysis and Optimization}
+\begin{itemize}
+	\item \textbf{Specific}: The application's ability to analyze and optimize code was tested with a variety of code samples. Each submission returned specific suggestions for improvement and potential error identifications.
 
-\textbf{Specific}: The application's ability to analyze and optimize code was tested with a variety of code samples. Each submission returned specific suggestions for improvement and potential error identifications.
+	\item \textbf{Measurable}: The quality of optimization suggestions was measured by comparing the execution time and efficiency of the original and optimized code. The reductions in execution time and resource utilization were significant in most cases. The performance assessment of the application highlights the efficiency gains achieved through optimization, as shown in Figure \ref{fig:execution_time_comparison}.
 
-\textbf{Measurable}: The quality of optimization suggestions was measured by comparing the execution time and efficiency of the original and optimized code. The reductions in execution time and resource utilization were significant in most cases. The performance assessment of the application highlights the efficiency gains achieved through optimization, as shown in Figure \ref{fig:execution_time_comparison}.
+	\item \textbf{Achievable}: The application successfully provided optimization suggestions for all tested code samples, demonstrating the feasibility of the functionality.
 
-\textbf{Achievable}: The application successfully provided optimization suggestions for all tested code samples, demonstrating the feasibility of the functionality.
+	\item \textbf{Relevant}: This feature directly contributes to sustainable coding practices by enhancing code efficiency, aligning with SDG 12: Responsible Consumption and Production.
 
-\textbf{Relevant}: This feature directly contributes to sustainable coding practices by enhancing code efficiency, aligning with SDG 12: Responsible Consumption and Production.
-
-\textbf{Time-bound}: The application processed and returned results within an acceptable timeframe, typically under a few seconds, ensuring a responsive user experience.
+	\item \textbf{Time-bound}: The application processed and returned results within an acceptable timeframe, typically under a few seconds, ensuring a responsive user experience.
+\end{itemize}
 
 \subsubsection{CO2 Emission Estimation}
-\textbf{Specific}: The CO2 emission estimations for both original and optimized code were specific and quantifiable, presented in a clear format to the user.
+\begin{itemize}
+	\item \textbf{Specific}: The CO2 emission estimations for both original and optimized code were specific and quantifiable, presented in a clear format to the user.
 
-\textbf{Measurable}: The emission estimates were measured in terms of the carbon footprint (in grams of CO2 equivalent), allowing users to objectively compare the environmental impact of different code versions.
+	\item \textbf{Measurable}: The emission estimates were measured in terms of the carbon footprint (in grams of CO2 equivalent), allowing users to objectively compare the environmental impact of different code versions.
 
-\textbf{Achievable}: All tested code samples successfully returned CO2 emission estimates, validating this functionality.
+	\item \textbf{Achievable}: All tested code samples successfully returned CO2 emission estimates, validating this functionality.
 
-\textbf{Relevant}: The emission estimates raise awareness about the environmental impact of computing, supporting the broader goal of environmental sustainability in IT.
+	\item \textbf{Relevant}: The emission estimates raise awareness about the environmental impact of computing, supporting the broader goal of environmental sustainability in IT.
 
-\textbf{Time-bound}: The CO2 emission estimation was provided concurrently with the code optimization results, maintaining an efficient response time.
+	\item \textbf{Time-bound}: The CO2 emission estimation was provided concurrently with the code optimization results, maintaining an efficient response time.
+\end{itemize}
 
 \subsubsection{Performance Metrics Visualization}
-\textbf{Specific}: The application generates visualizations to help users understand the performance impact of their code optimizations.
+\begin{itemize}
+	\item \textbf{Specific}: The application generates visualizations to help users understand the performance impact of their code optimizations.
 
-\textbf{Measurable}: Displays graphs comparing execution time, CO2 emissions, and energy consumption before and after optimization.
+	\item \textbf{Measurable}: Displays graphs comparing execution time, CO2 emissions, and energy consumption before and after optimization.
 
-\textbf{Achievable}: Utilizes Matplotlib for creating clear and informative visual representations of the data.
+	\item \textbf{Achievable}: Utilizes Matplotlib for creating clear and informative visual representations of the data.
 
-\textbf{Relevant}: Helps users see the tangible benefits of optimizing their code in terms of both performance and environmental impact.
+	\item \textbf{Relevant}: Helps users see the tangible benefits of optimizing their code in terms of both performance and environmental impact.
 
-\textbf{Time-bound}: Visualizations are generated immediately after the analysis and optimization process, providing real-time feedback.
+	\item \textbf{Time-bound}: Visualizations are generated immediately after the analysis and optimization process, providing real-time feedback.
+\end{itemize}
 
 \subsection{Non-Functional Requirements Assessment}
 \subsubsection{Energy Efficiency}
-\textbf{Specific and Measurable}: The energy efficiency of the application itself was assessed by monitoring resource usage during operation. The server's CPU and memory usage remained low, indicating efficient resource utilization. Resource utilization is a critical non-functional requirement, with Figure \ref{fig:resource_usage} demonstrating the reduction in server time and electricity consumption.
+\begin {itemize}
+\item \textbf{Specific and Measurable}: The energy efficiency of the application itself was assessed by monitoring resource usage during operation with the help of code carbon. The server's CPU and memory usage remained low, indicating efficient resource utilization. Resource utilization is a critical non-functional requirement, with Figure \ref{fig:resource_usage} demonstrating the reduction in server time and electricity consumption.
 
-\textbf{Achievable}: The lightweight design of the application, using Flask and minimal frontend resources, achieved the goal of low energy consumption.
+\item \textbf{Achievable}: The lightweight design of the application, using Flask and minimal frontend resources, achieved the goal of low energy consumption.
 
-\textbf{Relevant}: Energy efficiency directly contributes to reducing the environmental impact of the application, in line with Green IT principles.
+\item \textbf{Relevant}: Energy efficiency directly contributes to reducing the environmental impact of the application, in line with Green IT principles.
 
-\textbf{Time-bound}: Continuous monitoring during the testing phase confirmed consistent energy efficiency.
+\item \textbf{Time-bound}: Continuous monitoring during the testing phase confirmed consistent energy efficiency.
+\end {itemize}
 
 \subsubsection{User Experience}
-\textbf{Specific and Measurable}: User experience was evaluated through a survey conducted with a group of test users. Feedback on the interface's ease of use, clarity, and responsiveness was overwhelmingly positive.
+\begin {itemize}
+\item \textbf{Specific and Measurable}: User experience was evaluated through a survey conducted with a group of test users. Feedback on the interface's ease of use, clarity, and responsiveness was overwhelmingly positive.
 
-\textbf{Achievable}: The straightforward design and clear instructions on the web interface were effective in providing a good user experience.
+\item \textbf{Achievable}: The straightforward design and clear instructions on the web interface were effective in providing a good user experience.
 
-\textbf{Relevant}: A positive user experience is crucial for the application's adoption and effective use, impacting its potential contribution to sustainable practices.
+\item \textbf{Relevant}: A positive user experience is crucial for the application's adoption and effective use, impacting its potential contribution to sustainable practices.
 
-\textbf{Time-bound}: User feedback was gathered throughout the development process, allowing for iterative improvements.
+\item \textbf{Time-bound}: User feedback was gathered throughout the development process, allowing for iterative improvements.
+\end {itemize}
 
 \subsubsection{Environmental Impact}
-\textbf{Specific and Measurable}: The application's overall environmental impact was assessed by analyzing the energy consumption of the server and the CO2 emissions associated with its use.
+\begin {itemize}
+\item \textbf{Specific and Measurable}: The application's overall environmental impact was assessed by analyzing the energy consumption of the server and the CO2 emissions associated with its use.
 
-\textbf{Achievable}: By optimizing server resource usage and providing CO2 emission estimates, the application minimizes its environmental footprint.
+\item \textbf{Achievable}: By optimizing server resource usage and providing CO2 emission estimates, the application minimizes its environmental footprint.
 
-\textbf{Relevant}: Minimizing the environmental impact of software applications is a core aspect of Green IT and is directly aligned with the project's objectives.
+\item \textbf{Relevant}: Minimizing the environmental impact of software applications is a core aspect of Green IT and is directly aligned with the project's objectives.
+\end {itemize}
 
 \subsection{Comparative Analysis of GPT-4 with Other Tools}
 To evaluate GPT-4's performance and environmental impact against other tools, a comparative analysis was conducted using sample data collected from experiments. The tools compared include GPT-4, Human Optimization, IntelliCode, TabNine, and SonarQube. The comparison focused on four key metrics: CO2 Emissions, Execution Time, Energy Consumption, and Optimization Effectiveness.
@@ -723,34 +748,34 @@ The results of the comparative analysis in figures \ref{fig:execution_time_compa
 
 \paragraph{CO2 Emissions:}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/co2_emissions_comparison.png}
-    \caption{CO2 Emissions Comparison}
-    \label{fig:co2_emissions_comparison}
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/co2_emissions_comparison.png}
+	\caption{CO2 Emissions Comparison}
+	\label{fig:co2_emissions_comparison}
 \end{figure}
 
 \paragraph{Execution Time:}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/execution_time_comparison.png}
-    \caption{Execution Time Comparison}
-    \label{fig:execution_time_comparison}
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/execution_time_comparison.png}
+	\caption{Execution Time Comparison}
+	\label{fig:execution_time_comparison}
 \end{figure}
 
 \paragraph{Energy Consumption:}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/energy_consumption_comparison.png}
-    \caption{Energy Consumption Comparison}
-    \label{fig:energy_consumption_comparison}
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/energy_consumption_comparison.png}
+	\caption{Energy Consumption Comparison}
+	\label{fig:energy_consumption_comparison}
 \end{figure}
 
 \paragraph{Optimization Effectiveness:}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/optimization_effectiveness_comparison.png}
-    \caption{Optimization Effectiveness Comparison}
-    \label{fig:optimization_effectiveness_comparison}
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/optimization_effectiveness_comparison.png}
+	\caption{Optimization Effectiveness Comparison}
+	\label{fig:optimization_effectiveness_comparison}
 \end{figure}
 
 \section*{Plagiarism statement}
